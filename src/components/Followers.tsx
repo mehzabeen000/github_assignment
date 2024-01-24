@@ -10,7 +10,7 @@ const UserFollowers = () => {
     if (!followers.length) {
       fetchFollowers(user.login).then((data: any) => setFollowers(data))
     }
-  }, [followers])
+  }, [followers, fetchFollowers, setFollowers, user.login])
 
   return (
     <div>
